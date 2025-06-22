@@ -1,9 +1,17 @@
-import { Hono } from 'hono'
+import * as mongoose from "mongoose";
 
-const app = new Hono()
+import app from "./app";
 
-app.get('/', (c) => {
-  return c.text('Hello Hono!')
-})
-
-export default app
+mongoose
+    .connect(`${Bun.env.MONGO_URI}/ticketing-system`)
+    .then(() => {
+        console.log("Connected to MongoDB");
+        Bun.serve({
+          fetch: app.fetch,
+          port: Bun.env.PORT,
+        });
+        console.log(`Server is running on port ${Bun.env.PORT}`);
+    })
+    .catch((err) => {
+        console.error("Error connecting to MongoDB:", err);
+    });
