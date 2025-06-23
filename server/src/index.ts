@@ -7,8 +7,8 @@ mongoose
     .then(() => {
         console.log("Connected to MongoDB");
         Bun.serve({
-          fetch: app.fetch,
-          port: Bun.env.PORT,
+            fetch: app.fetch,
+            port: Bun.env.PORT,
         });
         console.log(`Server is running on port ${Bun.env.PORT}`);
     })
