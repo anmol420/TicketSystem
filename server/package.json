@@ -10,10 +10,14 @@
     "inngest": "^3.39.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.16.0",
-    "nodemailer": "^7.0.3"
+    "nodemailer": "^7.0.3",
+    "zod": "^3.25.67"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bcrypt": "^5.0.2",
+    "@types/bun": "latest",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/nodemailer": "^6.4.17"
   },
   "trustedDependencies": [
     "protobufjs"
