@@ -1,7 +1,8 @@
 {
   "name": "server",
   "scripts": {
-    "dev": "bun run --hot src/index.ts"
+    "dev": "bun run --hot src/index.ts",
+    "inngest-dev": "npx inngest-cli@latest dev"
   },
   "dependencies": {
     "@inngest/agent-kit": "^0.8.3",

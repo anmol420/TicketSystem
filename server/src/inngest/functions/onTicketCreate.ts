@@ -8,7 +8,7 @@ import analyzeTicket from "../../libs/aiAgent.libs";
 import userModel from "../../models/user.model";
 
 
-const onTicketCreate = inngest.createFunction(
+export const onTicketCreate = inngest.createFunction(
     { id: "on-ticket-created", retries: 2 },
     { event: "ticket/created" },
     async ({ event, step }) => {
